@@ -1,0 +1,75 @@
+  "Arrow Function Component": {
+    "prefix": "afc",
+    "body": [
+      "import React from 'react';",
+      "$1",
+      "const ${TM_FILENAME/(.*)\\..+$/$1/} = () => {",
+      "  return (",
+      "   <div>",
+      "     $2",
+      "   </div>",
+      " )",
+      "}",
+      "",
+      "export default ${TM_FILENAME/(.*)\\..+$/$1/};",
+    ]
+  },
+  "Arrow Function Styled Component": {
+    "prefix": "afsc",
+    "body": [
+      "import React from 'react';",
+      "import styled from 'styled-components';",
+      "$1",
+      "const ${TM_FILENAME/(.*)\\..+$/$1/} = () => {",
+      "  return (",
+      "   <div>",
+      "     $2",
+      "   </div>",
+      " )",
+      "}",
+      "",
+      "export default ${TM_FILENAME/(.*)\\..+$/$1/};",
+    ]
+  },
+  "Stateful Arrow Function Styled Component": {
+    "prefix": "safsc",
+    "body": [
+      "import React, { useState } from 'react';",
+      "import styled from 'styled-components';",
+      "$1",
+      "const ${TM_FILENAME/(.*)\\..+$/$1/} = () => {",
+      " $2",
+      "  return (",
+      "   <div>",
+      "     $3",
+      "   </div>",
+      " )",
+      "}",
+      "",
+      "export default ${TM_FILENAME/(.*)\\..+$/$1/};",
+    ]
+  },
+  "Styled Motion Component": {
+    "prefix": ":scfm",
+    "body": [
+      "import styled from 'styled-components';",
+      "import { motion } from 'framer-motion';",
+      "",
+      "export $1"
+    ],
+    "description": "quick start styled motion component"
+  },
+  "Import Framer Motion": {
+    "prefix": ":ifm",
+    "body": [
+      "import {$1} from 'framer-motion';$2"
+    ],
+    "description": "import framer motion"
+  },
+  "Import Styled Components": {
+    "prefix": ":isc",
+    "body": [
+      "import styled from 'styled-components';$1",
+    ]
+  }
+}
